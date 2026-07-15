@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Wealth Dashboard | Interactive Elements</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Muhammad Fahad <span>Wealth Dashboard</span></h1>
+        </div>
+        <button class="toggle-btn js-theme-toggle">🌙 Dark Mode</button>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <section class="input-section">
+        
+            <div class="tabs">
+                <button class="tab-btn js-tab-btn is-active" data-target="business-roi">Business ROI</button>
+                <button class="tab-btn js-tab-btn" data-target="crypto-returns">Crypto Returns</button>
+                <button class="tab-btn js-tab-btn" data-target="tax-calc">Tax Calculator</button>
+            </div>
+
+            <div id="business-roi" class="form-content is-active">
+                <h2>Calculate ROI</h2>
+                <div class="input-group">
+                    <label>Total Investment (Rs)</label>
+                    <input type="number" class="js-roi-invest" placeholder="e.g. 500000">
+                </div>
+                <div class="input-group">
+                    <label>Total Return/Revenue (Rs)</label>
+                    <input type="number" class="js-roi-return" placeholder="e.g. 650000">
+                </div>
+                <button class="action-btn js-calc-roi">Calculate ROI</button>
+            </div>
+
+            <div id="crypto-returns" class="form-content">
+                <h2>Crypto Portfolio</h2>
+                <div class="input-group">
+                    <label>Buy Price (USD)</label>
+                    <input type="number" class="js-crypto-buy" placeholder="e.g. 60000">
+                </div>
+                <div class="input-group">
+                    <label>Current Price (USD)</label>
+                    <input type="number" class="js-crypto-current" placeholder="e.g. 65000">
+                </div>
+                <button class="action-btn js-calc-crypto">Check Profit/Loss</button>
+            </div>
+
+            <div id="tax-calc" class="form-content">
+                <h2>Business Tax</h2>
+                <div class="input-group">
+                    <label>Annual Revenue (Rs)</label>
+                    <input type="number" class="js-tax-revenue" placeholder="e.g. 1200000">
+                </div>
+                <div class="input-group">
+                    <label>Tax Rate (%)</label>
+                    <input type="number" class="js-tax-rate" placeholder="e.g. 15">
+                </div>
+                <button class="action-btn js-calc-tax">Calculate Tax</button>
+            </div>
+
+        </section>
+
+        <section class="output-section">
+            <div class="result-card">
+                <h3>Live Results</h3>
+                <p class="result-text js-result-display">Enter your data on the left to see the calculation.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
